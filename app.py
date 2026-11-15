@@ -364,6 +364,7 @@ regions = ["All Regions"] + sorted(df["Region"].dropna().unique().tolist())
 # ============================================================
 
 app = Dash(__name__)
+server = app.server
 app.title = "SunVolt Energy Dashboard"
 
 app.layout = html.Div(
